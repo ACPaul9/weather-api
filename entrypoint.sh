@@ -50,7 +50,7 @@ initialize_db () {
   check_test_db
 
   echo "Migration[development]:"
-  RAILS_ENV=development bundle exec rails db:migrate
+  RAILS_ENV=development bundle exec rails db:migrate:with_data
   echo "Migration[test]:"
   RAILS_ENV=test bundle exec rails db:migrate
 }

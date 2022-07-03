@@ -77,6 +77,9 @@ GEM
       rexml
     crass (1.0.6)
     daemons (1.4.1)
+    data_migrate (8.0.0)
+      activerecord (>= 5.0)
+      railties (>= 5.0)
     debug (1.5.0)
       irb (>= 1.3.6)
       reline (>= 0.2.7)
@@ -87,10 +90,6 @@ GEM
       delayed_job (>= 3.0, < 5)
     diff-lcs (1.5.0)
     digest (3.1.0)
-    dotenv (2.7.6)
-    dotenv-rails (2.7.6)
-      dotenv (= 2.7.6)
-      railties (>= 3.2)
     erubi (1.10.0)
     et-orbi (1.2.7)
       tzinfo
@@ -229,9 +228,9 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   daemons
+  data_migrate
   debug
   delayed_job_active_record
-  dotenv-rails
   httparty
   pg (~> 1.1)
   pry-rails

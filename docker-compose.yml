@@ -25,7 +25,7 @@ services:
 
   daemons:
     build: ./
-    entrypoint: "/usr/bin/entrypoint.sh"
+    entrypoint: "/usr/bin/daemons_entrypoint.sh"
     command: bundle exec bin/delayed_job start
     volumes:
       - ./:/app

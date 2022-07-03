@@ -1,24 +1,29 @@
-# README
+# Weather API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Описание
 
-Things you may want to cover:
+Проект выполнен в рамках выполнения тестового задания
 
-* Ruby version
+### Environment requirements
 
-* System dependencies
+```
+Docker installed
+```
 
-* Configuration
+### Первый запуск
 
-* Database creation
+* Готовим окружение
 
-* Database initialization
+```
+cp docker-compose.override.yml.sample docker-compose.override.yml
+```
 
-* How to run the test suite
+Прописываем в `docker-compose.override.yml` значение api-ключа, полученного на [accuweather](https://developer.accuweather.com/apis)
 
-* Services (job queues, cache servers, search engines, etc.)
+* Запускаем приложение
 
-* Deployment instructions
+```
+docker compose up
+```
 
-* ...
+Документация в swagger формате находится в файле `swagger/swagger.yml`, для отображения можно использовать [Swagger Editor](https://editor.swagger.io/)

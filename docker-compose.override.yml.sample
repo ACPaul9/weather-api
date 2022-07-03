@@ -1,0 +1,11 @@
+x-common-environment: &common-environment
+  ACCUWEATHER_API_KEY: # enter accuweather api key here
+
+services:
+  daemons:
+    environment:
+      <<: *common-environment
+
+  backend:
+    environment:
+      <<: *common-environment

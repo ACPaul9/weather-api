@@ -4,6 +4,6 @@ return if defined?(Rails::Console) || Rails.env.test? || File.split($PROGRAM_NAM
 
 s = Rufus::Scheduler.singleton
 
-s.every '10m' do
+s.every '30m' do
   AccuweatherCache.delay.call
 end

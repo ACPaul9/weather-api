@@ -1,5 +1,5 @@
 class StatusController < ApplicationController
   def health
-    render "OK"
+    render json: { status: :ok }
   end
 end
