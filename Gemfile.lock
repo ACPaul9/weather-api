@@ -108,6 +108,8 @@ GEM
     io-console (0.5.11)
     irb (1.4.1)
       reline (>= 0.3.0)
+    json-schema (2.8.1)
+      addressable (>= 2.4)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -200,6 +202,10 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.11.0)
+    rswag-specs (2.5.1)
+      activesupport (>= 3.1, < 7.1)
+      json-schema (~> 2.2)
+      railties (>= 3.1, < 7.1)
     rufus-scheduler (3.8.1)
       fugit (~> 1.1, >= 1.1.6)
     strscan (3.0.3)
@@ -232,6 +238,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.3)
   rspec-rails
+  rswag-specs
   rufus-scheduler
   tzinfo-data
   vcr

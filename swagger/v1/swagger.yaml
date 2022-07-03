@@ -1,0 +1,85 @@
+---
+openapi: 3.0.1
+info:
+  title: Weather API
+  version: v1
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com
+components:
+  schemas:
+    temperature_object:
+      type: object
+      properties:
+        temperature:
+          type: string
+          pattern: "^\\d{1,3}(\\.\\d)?$"
+    error_object:
+      type: object
+      properties:
+        error:
+          type: string
+paths:
+  "/weather/current":
+    get:
+      summary: return current temperature
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              example:
+                temperature: '22.0'
+  "/weather/historical/min":
+    get:
+      summary: return lowest temperature for last 24 hours
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              example:
+                temperature: '2.0'
+  "/weather/historical/max":
+    get:
+      summary: return highest temperature for last 24 hours
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              example:
+                temperature: '34.0'
+  "/weather/historical/avg":
+    get:
+      summary: return average temperature for last 24 hours
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              example:
+                temperature: '18.0'
+  "/weather/by_time":
+    get:
+      summary: return temperature closest for timestamp
+      parameters:
+      - name: timestamp
+        in: query
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              example:
+                temperature: '26.0'
+        '404':
+          description: not found
+          content:
+            application/json:
+              example:
+                error: not found
