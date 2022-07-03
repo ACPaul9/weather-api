@@ -14,10 +14,10 @@ RSpec.describe "Weather API" do
   path "/weather/current" do
     get "return current temperature" do
       response "200", "successful" do
-        schema '$ref' => '#/components/schemas/temperature_object'
+        schema "$ref" => "#/components/schemas/temperature_object"
         after do |example|
           example.metadata[:response][:content] = {
-            'application/json' => {
+            "application/json" => {
               example: JSON.parse(response.body, symbolize_names: true)
             }
           }
