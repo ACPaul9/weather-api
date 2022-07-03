@@ -1,0 +1,59 @@
+version: "3.9"
+
+x-common-environment: &common-environment
+  RAILS_ENV: development
+  DB_HOST: db
+  DB_NAME: weather_api_development
+  DB_PASSWORD: weather_api_password
+  DB_POOL: 5
+  DB_PORT: 5432
+  DB_TEST_NAME: weather_api_test
+  DB_USERNAME: weather_api_user
+  PGPASSWORD: password
+  SWAGGER_DRY_RUN: 0
+
+services:
+  db:
+    image: postgres:12.11-alpine
+    volumes:
+      - ./tmp/db:/pgdata
+    environment:
+      POSTGRES_PASSWORD: password
+      PGDATA: /pgdata
+    networks:
+      - weather_api
+
+  daemons:
+    build: ./
+    entrypoint: "/usr/bin/entrypoint.sh"
+    command: bundle exec bin/delayed_job start
+    volumes:
+      - ./:/app
+    environment:
+      <<: *common-environment
+    networks:
+      - weather_api
+    depends_on:
+      - db
+      - backend
+
+  backend:
+    tty: true
+    stdin_open: true
+    build: ./
+    entrypoint: "/usr/bin/entrypoint.sh"
+    command: bundle exec rails server -p 3000 -b 0.0.0.0
+    volumes:
+      - ./:/app
+    environment:
+      <<: *common-environment
+    ports:
+      - "3000:3000"
+    networks:
+      - weather_api
+    depends_on:
+      - db
+
+networks:
+  weather_api:
+    driver: bridge
