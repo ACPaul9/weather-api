@@ -9,6 +9,9 @@ gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
 gem "dotenv-rails"
 gem "httparty"
+gem "delayed_job_active_record"
+gem "rufus-scheduler"
+gem "daemons"
 
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
