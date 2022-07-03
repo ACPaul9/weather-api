@@ -18,4 +18,14 @@ class WeatherController < ApplicationController
     temperature = Queries::HistoricalAvg.call
     render json: {temperature: temperature}
   end
+
+  def by_time
+    temperature = Queries::ByTime.call(params[:timestamp])
+
+    if temperature
+      render json: {temperature: temperature}
+    else
+      render json: {error: 'not found'}, status: :not_found
+    end
+  end
 end
