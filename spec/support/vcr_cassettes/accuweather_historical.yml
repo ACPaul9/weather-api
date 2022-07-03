@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dataservice.accuweather.com/currentconditions/v1/293006/historical/24?apikey=<ACCUWEATHER_API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 03 Jul 2022 15:49:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '11770'
+      Connection:
+      - keep-alive
+      Server:
+      - Microsoft-IIS/10.0
+      Ratelimit-Limit:
+      - '50'
+      Ratelimit-Remaining:
+      - '20'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, accept
+      Access-Control-Max-Age:
+      - '3628800'
+      Vary:
+      - Accept-Encoding
+      Cache-Control:
+      - public, max-age=54
+      Expires:
+      - Sun, 03 Jul 2022 15:50:05 GMT
+      Akamai-Grn:
+      - 0.4869dc17.1656863351.70512869
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - deflate;q=0.6
+      - gzip;q=1.0
+      - identity;q=0.3
+      Host:
+      - api.accuweather.com
+      User-Agent:
+      - Ruby
+      X-Forwarded-For:
+      - 62.148.157.225
+      X-Forwarded-Port:
+      - '443'
+      X-Forwarded-Proto:
+      - https
+    body:
+      encoding: UTF-8
+      string: '[{"LocalObservationDateTime":"2022-07-03T17:57:00+03:00","EpochTime":1656860220,"WeatherText":"Sunny","WeatherIcon":1,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":28.3,"Unit":"C","UnitType":17},"Imperial":{"Value":83.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us","Link":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us"},{"LocalObservationDateTime":"2022-07-03T17:04:00+03:00","EpochTime":1656857040,"WeatherText":"Sunny","WeatherIcon":1,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":28.3,"Unit":"C","UnitType":17},"Imperial":{"Value":83.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us","Link":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us"},{"LocalObservationDateTime":"2022-07-03T16:03:00+03:00","EpochTime":1656853380,"WeatherText":"Sunny","WeatherIcon":1,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":29.1,"Unit":"C","UnitType":17},"Imperial":{"Value":84.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us","Link":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us"},{"LocalObservationDateTime":"2022-07-03T14:57:00+03:00","EpochTime":1656849420,"WeatherText":"Mostly
+        sunny","WeatherIcon":2,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":28.0,"Unit":"C","UnitType":17},"Imperial":{"Value":82.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us","Link":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us"},{"LocalObservationDateTime":"2022-07-03T14:04:00+03:00","EpochTime":1656846240,"WeatherText":"Partly
+        sunny","WeatherIcon":3,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":28.0,"Unit":"C","UnitType":17},"Imperial":{"Value":82.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us","Link":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us"},{"LocalObservationDateTime":"2022-07-03T12:57:00+03:00","EpochTime":1656842220,"WeatherText":"Mostly
+        sunny","WeatherIcon":2,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":26.6,"Unit":"C","UnitType":17},"Imperial":{"Value":80.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us","Link":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us"},{"LocalObservationDateTime":"2022-07-03T12:04:00+03:00","EpochTime":1656839040,"WeatherText":"Mostly
+        sunny","WeatherIcon":2,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":26.6,"Unit":"C","UnitType":17},"Imperial":{"Value":80.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us","Link":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us"},{"LocalObservationDateTime":"2022-07-03T11:04:00+03:00","EpochTime":1656835440,"WeatherText":"Mostly
+        cloudy","WeatherIcon":6,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":25.0,"Unit":"C","UnitType":17},"Imperial":{"Value":77.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us","Link":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us"},{"LocalObservationDateTime":"2022-07-03T09:57:00+03:00","EpochTime":1656831420,"WeatherText":"Partly
+        sunny","WeatherIcon":3,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":21.8,"Unit":"C","UnitType":17},"Imperial":{"Value":71.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us","Link":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us"},{"LocalObservationDateTime":"2022-07-03T08:57:00+03:00","EpochTime":1656827820,"WeatherText":"Partly
+        sunny","WeatherIcon":3,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":20.0,"Unit":"C","UnitType":17},"Imperial":{"Value":68.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us","Link":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us"},{"LocalObservationDateTime":"2022-07-03T07:58:00+03:00","EpochTime":1656824280,"WeatherText":"Sunny","WeatherIcon":1,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":17.6,"Unit":"C","UnitType":17},"Imperial":{"Value":64.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us","Link":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us"},{"LocalObservationDateTime":"2022-07-03T06:57:00+03:00","EpochTime":1656820620,"WeatherText":"Partly
+        sunny","WeatherIcon":3,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":15.6,"Unit":"C","UnitType":17},"Imperial":{"Value":60.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us","Link":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us"},{"LocalObservationDateTime":"2022-07-03T06:03:00+03:00","EpochTime":1656817380,"WeatherText":"Cloudy","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":15.6,"Unit":"C","UnitType":17},"Imperial":{"Value":60.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us","Link":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us"},{"LocalObservationDateTime":"2022-07-03T05:03:00+03:00","EpochTime":1656813780,"WeatherText":"Cloudy","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":14.4,"Unit":"C","UnitType":17},"Imperial":{"Value":58.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us","Link":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us"},{"LocalObservationDateTime":"2022-07-03T03:57:00+03:00","EpochTime":1656809820,"WeatherText":"Cloudy","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":14.4,"Unit":"C","UnitType":17},"Imperial":{"Value":58.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us","Link":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us"},{"LocalObservationDateTime":"2022-07-03T03:05:00+03:00","EpochTime":1656806700,"WeatherText":"Cloudy","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":14.4,"Unit":"C","UnitType":17},"Imperial":{"Value":58.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us","Link":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us"},{"LocalObservationDateTime":"2022-07-03T01:57:00+03:00","EpochTime":1656802620,"WeatherText":"Mostly
+        cloudy","WeatherIcon":38,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":15.2,"Unit":"C","UnitType":17},"Imperial":{"Value":59.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us","Link":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us"},{"LocalObservationDateTime":"2022-07-03T00:58:00+03:00","EpochTime":1656799080,"WeatherText":"Clear","WeatherIcon":33,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":15.5,"Unit":"C","UnitType":17},"Imperial":{"Value":60.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us","Link":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us"},{"LocalObservationDateTime":"2022-07-03T00:04:00+03:00","EpochTime":1656795840,"WeatherText":"Clear","WeatherIcon":33,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":15.5,"Unit":"C","UnitType":17},"Imperial":{"Value":60.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us","Link":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us"},{"LocalObservationDateTime":"2022-07-02T23:06:00+03:00","EpochTime":1656792360,"WeatherText":"Clear","WeatherIcon":33,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":16.7,"Unit":"C","UnitType":17},"Imperial":{"Value":62.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us","Link":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us"},{"LocalObservationDateTime":"2022-07-02T22:04:00+03:00","EpochTime":1656788640,"WeatherText":"Clear","WeatherIcon":33,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":18.2,"Unit":"C","UnitType":17},"Imperial":{"Value":65.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us","Link":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us"},{"LocalObservationDateTime":"2022-07-02T20:57:00+03:00","EpochTime":1656784620,"WeatherText":"Sunny","WeatherIcon":1,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":21.0,"Unit":"C","UnitType":17},"Imperial":{"Value":70.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us","Link":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us"},{"LocalObservationDateTime":"2022-07-02T19:58:00+03:00","EpochTime":1656781080,"WeatherText":"Sunny","WeatherIcon":1,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":22.4,"Unit":"C","UnitType":17},"Imperial":{"Value":72.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us","Link":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us"},{"LocalObservationDateTime":"2022-07-02T18:57:00+03:00","EpochTime":1656777420,"WeatherText":"Sunny","WeatherIcon":1,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":23.7,"Unit":"C","UnitType":17},"Imperial":{"Value":75.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us","Link":"http://www.accuweather.com/en/ru/kaluga/293006/current-weather/293006?lang=en-us"}]'
+  recorded_at: Sun, 03 Jul 2022 15:49:12 GMT
+recorded_with: VCR 6.1.0
